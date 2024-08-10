@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>8.10课程</div>
+    <!-- 网页布局CSS tailwindCSS-->
+    <script>
+      console.log('8.10')
+
+      //块级作用域 -> fn{}
+      //   let a = 1 //可以改
+      //   const b = 2 //不可以改
+
+      //   function a() {
+      //     let d = 5
+      //     let e = 6
+      //     console.log(`函数中的D是${d},函数中的E是${e}`)
+      //   }
+      //   a()
+      //   console.log(d, e)
+
+      //console.log('c= ' + c) //c = undefined
+      //var c = 3 //为什么被弃用了？ -> 因为不是块级作用域/变量提升
+      //var定义的变量 可以被之前的程序使用 不会报错 定义的变量值 = undefined
+
+      //   console.log('第一个a= ' + a)
+      //   let a = 2 //let定义的变量 不可以被之前的程序使用 会报错 -> 如果出现程序bug 方便查找且出错后的程序不会执行
+      //   console.log('第二个a输出= ' + a)
+
+      //javascript -> 基本数据类型 number string boolean undefined null -> number就是数 string是字符串 boolean = true/false
+      //   let e = 2 //number
+      //   let f = '2%42463shdhsjdStein动画ははは' //string ''内的都是字符串
+      //   let g = true | false //boolean 开关 只有开和闭
+
+      //   let h //let h = undefined //没有被定义
+      //   if (h === undefined) {
+      //     console.log(h)
+      //   } else {
+      //     console.log('不存在')
+      //   }
+
+      //   let j = null
+
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8]
+      console.log(arr.length) //数组的属性有长度 长度是罢
+      console.log(arr[7]) //index序号 0... arr.length - 1
+    </script>
+  </body>
+</html>
