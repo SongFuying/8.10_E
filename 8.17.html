@@ -22,6 +22,22 @@
       //3. js课程自学 -> 一定要把函数学习了
       //4. 思考app的思路 -> 想你要做一个什么样的app
 
+      //冒泡排序 -> 作业
+      const arrBulb = [2, 3, 5, 6, 3, 4, 6, 7, 3, 6, 8, 3]
+      function bulbSort(arr) {
+        for (let j = 0; j < arr.length - 1; j++) {
+          for (let i = 0; i < arr.length - 1 - j; i++) {
+            if (arr[i] > arr[i + 1]) {
+              let temp = arr[i]
+              arr[i] = arr[i + 1]
+              arr[i + 1] = temp
+            }
+          }
+        }
+        return arr
+      }
+      console.log(bulbSort(arrBulb))
+
       const arr = [1, 4, 4, 5, 2, 5, 2, 5, 2]
       //数组的操作命令 arr.xxx -> 问chat 结合教程...
       arr.reverse() //数组反转
@@ -107,22 +123,6 @@
         console.log(`i的值是${i}`)
       }
       console.log('循环结束')
-
-      //冒泡排序 -> 作业
-      const arrBulb = [2, 3, 5, 6, 3, 4, 6, 7, 3, 6, 8, 3]
-      function bulbSort(arr) {
-        for (let j = 0; j < arr.length - 1; j++) {
-          for (let i = 0; i < arr.length - 1 - j; i++) {
-            if (arr[i] > arr[i + 1]) {
-              let temp = arr[i]
-              arr[i] = arr[i + 1]
-              arr[i + 1] = temp
-            }
-          }
-        }
-        return arr
-      }
-      console.log(bulbSort(arrBulb))
 
       //函数 -> js的核心 -> js面向过程编程(函数是核心) / java -> 面向对象编程(obj是核心)
       //面向过程编程
