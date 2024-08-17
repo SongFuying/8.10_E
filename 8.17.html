@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- body里面的东西是html -->
+    <div>8.17</div>
+    <!-- script中的东西是javascript -->
+    <script>
+      //1.数组的操作方法 -> .map .sort
+      //2.数据类型的转换 -> .toString() Number() arr.join('') arr.split('')
+      //3.typeof -> 获取变量的数据类型 js中数组归类于object
+      //4.for循环 -> 如何循环 和i的关系 -> 冒泡排序
+      //5.面向过程和面向对象
+
+      //作业
+      //1. 了解冒泡排序 -> 用for for -> 用js -> 最基础的算法
+      //2. 复习所有内容
+      //3. js课程自学 -> 一定要把函数学习了
+      //4. 思考app的思路 -> 想你要做一个什么样的app
+
+      const arr = [1, 4, 4, 5, 2, 5, 2, 5, 2]
+      //数组的操作命令 arr.xxx -> 问chat 结合教程...
+      arr.reverse() //数组反转
+
+      //.map -> 循环输出每一项
+      //arr.map(()=>{}) -> [()=> {}] -> 立即执行函数
+      arr.map((item, index) => {
+        console.log(`item:${item}, index:${index}`)
+      })
+
+      //for循环 -> 可以自己写一些循环算法
+      //.sort -> 给数组排序
+      arr.sort((a, b) => {
+        return b - a //大 -> 小排列
+        //return a - b 小 -> 大排列
+      })
+      console.log(arr)
+
+      //Math.xxx -> 一些方法 -> 问chat 结合教程...
+      const a = 1
+      const b = 2
+      console.log(Math.max(a, b)) //Math.min()选出最小的
+
+      //数据类型 -> 数据类型的转换 如何将number -> string -> arr
+
+      //.toString() -> 数据转化变为字符串
+      const num = 88 //number
+      const strNum = num.toString()
+      console.log(strNum)
+
+      //Number()
+      const string = '8.17课程' //string -> 不能转换为number 因为有除了数字之外的内容 -> NaN -> not a number的缩写
+      const stringNum = '817'
+      const numStr = Number(stringNum)
+      console.log(numStr) //'817'字符串 转化为num格式
+
+      const aa = '1'
+      const bb = '2'
+      console.log(aa + bb) //输出的结果 12
+      console.log(Number(aa) + Number(bb)) //输出的结果3
+
+      const cc = '今天'
+      const dd = '是8月17日'
+      console.log(cc + dd) // '今天是8月17日'
+
+      //.join('') -> arr -> string
+      const arr2 = [2, 4, 5, 6, 5, 3, 5, 3] //number型数组
+      const strArr = arr2.join('')
+      console.log(strArr)
+
+      //.split('') -> string -> arr
+      const arrStr = strArr.split('')
+      console.log(arrStr)
+
+      //typeof -> 检测类型
+      console.log(typeof bb) //object -> js中数组的类型是归于object
+
+      const arrObj = {
+        0: 2,
+        1: 4,
+        2: 5
+        //...
+      }
+
+      //什么是object？？
+      const obj1 = {
+        name: 'sfy',
+        age: 'xxx',
+        job: 'designer'
+      }
+      const obj2 = {
+        name: 'jack',
+        age: 'xxx',
+        job: 'engineer'
+      }
+
+      //循环for...  while...
+      //i++ 每次执行i的值 +1 一旦i > 5就会跳出循环 继续向下执行命令
+      for (let i = 0; i < 5; i++) {
+        //内部的程序循环执行
+        //fn()
+        // console.log('8月17日的课程')
+        console.log(`i的值是${i}`)
+      }
+      console.log('循环结束')
+
+      //冒泡排序 -> 作业
+
+      //函数 -> js的核心 -> js面向过程编程(函数是核心) / java -> 面向对象编程(obj是核心)
+      //面向过程编程
+      const aaaa = 2
+      const bbbb = 3
+      //function函数
+      function fn(aaa) {
+        console.log(aaa)
+      }
+      fn(aaaa)
+      fn(bbbb)
+
+      //面向对象
+      //   class{
+      //     let aaa =
+      //     private xxxx
+      //   }
+    </script>
+  </body>
+</html>
