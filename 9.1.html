@@ -72,9 +72,27 @@
         this.gender = gender
       }
 
+      //es6 class的写法
+      class Person {
+        constructor(name, age, gender) {
+          this.name = name
+          this.age = age
+          this.gender = gender
+        }
+        getName() {
+          return this.name
+        }
+        setName(name) {
+          this.name = name
+        }
+      }
+
+      //公共的属性 所有的实例都可以使用
       Person.prototype.say = function () {
         console.log('hello' + this.name)
       }
+
+      Person.prototype.job = 'student'
 
       //这个是不对的
       //   const person1 = () => {
@@ -91,6 +109,9 @@
         constructor.apply(newObj, args)
         return newObj instanceof Object ? newObj : {}
       }
+
+      const p3 = newFn(Person, 'user3', 20, '男')
+
       console.log(p3)
       console.log(p3.say())
 
