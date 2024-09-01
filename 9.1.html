@@ -72,6 +72,10 @@
         this.gender = gender
       }
 
+      Person.prototype.say = function () {
+        console.log('hello' + this.name)
+      }
+
       //这个是不对的
       //   const person1 = () => {
       //     this.name = name
@@ -82,12 +86,13 @@
 
       function newFn(constructor, ...args) {
         let newObj = {}
+        //原型链 -> 实例化的obj.__proto__ -> 构造函数的prototype -> Object.prototype是js底层自定义的 -> null(原型链的终点)
         newObj.__proto__ = constructor.prototype
         constructor.apply(newObj, args)
         return newObj instanceof Object ? newObj : {}
       }
-      const p3 = newFn(Person, 'user3', 20, '男')
       console.log(p3)
+      console.log(p3.say())
 
       const p1 = new Person('user1', 18, '男') //实例化 -> 其实就是一个object
       const p2 = new Person('user2', 19, '女')
