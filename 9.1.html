@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>9.1</div>
+    <script>
+      //obj 构造 构造函数 作用域 参数
+      //js -> 程序猿 媒体艺术调演 -> js 60% python 40 - 50% c# unity/.net
+      //js -> 基础很重要 -> 基础的课程一定要理解 要多看多想 -> 从js扩展过度到其他语言 -> 多写
+
+      //react -> 个人网页 -> figma个人网页的布局 -> 看别人的个人网页 -> 结合自己的想法设计布局
+      //个人想法 -> 用figma -> 用figma画一下 -> productHunt
+      //    - 二维码可以弹出一个网页 -> 展示所有社交名片 -> 后台可以设置的 -> 应用App
+
+      //key value
+      const obj = {
+        name: 'user1',
+        age: 18,
+        gender: '男'
+      }
+      console.log(Object.keys(obj))
+      console.log(obj.name)
+
+      //数组对象 -> 由obj构成的数组 -> 本质是数组
+      const objArr = [
+        {
+          商品图片: 'url',
+          商品名称: '吹风机',
+          商品价格: '2000'
+        },
+        {
+          商品图片: 'url',
+          商品名称: '电冰箱',
+          商品价格: '8000'
+        },
+        {
+          商品图片: 'url',
+          商品名称: '文具',
+          商品价格: '20'
+          //。。。100000个
+        }
+      ]
+      //.map(function(item)) -> 箭头函数 -> 立即执行
+      objArr.map(item => {
+        console.log(item.name)
+      })
+
+      //for...of -> 数组 -> for的进阶
+      //for ...in -> 对象 -> 遍历对象 -> for的进阶
+      for (let item of objArr) {
+        for (let key in item) {
+          console.log(key)
+          console.log(item[key])
+        }
+      }
+    </script>
+  </body>
+</html>
