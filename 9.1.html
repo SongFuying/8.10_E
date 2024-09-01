@@ -17,46 +17,82 @@
       //    - 二维码可以弹出一个网页 -> 展示所有社交名片 -> 后台可以设置的 -> 应用App
 
       //key value
-      const obj = {
-        name: 'user1',
-        age: 18,
-        gender: '男'
-      }
-      console.log(Object.keys(obj))
-      console.log(obj.name)
+      //   const obj = {
+      //     name: 'user1',
+      //     age: 18,
+      //     gender: '男'
+      //   }
+      //   console.log(Object.keys(obj))
+      //   console.log(obj.name)
 
-      //数组对象 -> 由obj构成的数组 -> 本质是数组
-      const objArr = [
-        {
-          商品图片: 'url',
-          商品名称: '吹风机',
-          商品价格: '2000'
-        },
-        {
-          商品图片: 'url',
-          商品名称: '电冰箱',
-          商品价格: '8000'
-        },
-        {
-          商品图片: 'url',
-          商品名称: '文具',
-          商品价格: '20'
-          //。。。100000个
-        }
-      ]
+      //   //数组对象 -> 由obj构成的数组 -> 本质是数组
+      //   const objArr = [
+      //     {
+      //       商品图片: 'url',
+      //       商品名称: '吹风机',
+      //       商品价格: '2000'
+      //     },
+      //     {
+      //       商品图片: 'url',
+      //       商品名称: '电冰箱',
+      //       商品价格: '8000'
+      //     },
+      //     {
+      //       商品图片: 'url',
+      //       商品名称: '文具',
+      //       商品价格: '20'
+      //       //。。。100000个
+      //     }
+      //   ]
       //.map(function(item)) -> 箭头函数 -> 立即执行
-      objArr.map(item => {
-        console.log(item.name)
-      })
+      //   objArr.map(item => {
+      //     console.log(item.name)
+      //   })
 
       //for...of -> 数组 -> for的进阶
       //for ...in -> 对象 -> 遍历对象 -> for的进阶
-      for (let item of objArr) {
-        for (let key in item) {
-          console.log(key)
-          console.log(item[key])
-        }
+      //   for (let item of objArr) {
+      //     for (let key in item) {
+      //       console.log(key)
+      //       console.log(item[key])
+      //     }
+      //   }
+
+      //构造函数
+      //js -> 面向过程 -> 函数式=编程 -> 面向对象 -> 构造函数 -> web开发
+      //java c# c++ -> 面向对象OOP -> 软件开发的大头 -> java传统服务器 软件 c# unity和.Net（微软） c++ UE和工业控制 上位机
+      //python -> 面向过程也是面向对象 -> 学起来很简单 -> 用起来很难的语言 -> 数据分析和人工智能 -> 软件开发(少数)
+
+      //构造函数首字母大写 -> 构造函数只能用function声明
+      function Person(name, age, gender) {
+        //this的指向 -> 看教程 -> 1.this谁调用它指向谁 2.this指向构造函数的实例 3.箭头函数的this指向window -> 最外层
+        //4.call apply bind -> 改变this的指向
+        this.name = name
+        this.age = age
+        this.gender = gender
       }
+
+      //这个是不对的
+      //   const person1 = () => {
+      //     this.name = name
+      //     this.age = age
+      //     this.gender = gender
+      //   }
+      //   person1.call(obj)
+
+      function newFn(constructor, ...args) {
+        let newObj = {}
+        newObj.__proto__ = constructor.prototype
+        constructor.apply(newObj, args)
+        return newObj instanceof Object ? newObj : {}
+      }
+      const p3 = newFn(Person, 'user3', 20, '男')
+      console.log(p3)
+
+      const p1 = new Person('user1', 18, '男') //实例化 -> 其实就是一个object
+      const p2 = new Person('user2', 19, '女')
+      console.log(p1)
+      console.log(p2)
     </script>
   </body>
 </html>
