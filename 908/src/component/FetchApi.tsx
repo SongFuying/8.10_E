@@ -16,29 +16,43 @@ export default function FetchApi() {
       const res = await fetch('https://jsonplaceholder.typicode.com/albums')
       const data = await res.json()
       console.log(data)
+      setList(data)
+      return data
     }
     getApi()
 
-    //POST
-    const postApi = async () => {
-      {
-        const res = await fetch('https://jsonplaceholder.typicode.com/albums/posts', {
-          method: 'POST',
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8' //告诉后端提交的文件是json
-          },
-          body: JSON.stringify({
-            userId: 0,
-            id: 0,
-            title: 'postTest'
-          })
-        })
-        const data = await res.json()
-        console.log(data)
-      }
-    }
-    postApi()
+    //     //POST
+    //     const postApi = async () => {
+    //       {
+    //         const res = await fetch('https://jsonplaceholder.typicode.com/albums/posts', {
+    //           method: 'POST', //'PUT DELETE'
+    //           headers: {
+    //             'Content-type': 'application/json; charset=UTF-8' //告诉后端提交的文件是json
+    //           },
+    //           body: JSON.stringify({
+    //             userId: 0,
+    //             id: 0,
+    //             title: 'postTest'
+    //           })
+    //         })
+    //         const data = await res.json()
+    //         console.log(data)
+    //       }
+    //     }
+    //     postApi()
   }, []) //后面的数组 是钩子的依赖项 依赖项改变 前面的函数会再次执行
 
-  return <div>FetchApi</div>
+  return (
+    <>
+      {list &&
+        list.map((item: IItem[]) => {
+          return (
+            <div key={item.userID}>
+              <div>Id:{item.id}</div>
+              <div>Title:{item.title}</div>
+            </div>
+          )
+        })}
+    </>
+  )
 }
