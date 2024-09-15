@@ -14,6 +14,8 @@ function Home() {
     setCount(prev => prev - 1)
   }
 
+  const a = JSON.stringify('JSON')
+
   return (
     <>
       <div className="h-full w-full absolute">
