@@ -87,4 +87,7 @@ react19 -> 进阶有难度
     - 后端 -> 后端api -> `https://jsonplaceholder.typicode.com/albums` -> 文件格式JSON(javascript object notation) -> 可以跨语言识别(适合语言都可以识别JSON) -> 前端和后端用的编程语言是不一样的js/ts 后端java/go/python/c#/php
     - `JSON.stringify('JSON文件')` -> JSON转换为js可以识别的部分
     - `JSON.parse（'js的对象数组'）`
-  - 异步async和同步
+  - 异步async 和同步
+  - RestFulApi -> GET POST DELETE PUT -> 查增删改 -> 增删改查
+  - `git pull` -> 无法拉去？
+  - await -> 后面 + promise 和async函数调用组合
