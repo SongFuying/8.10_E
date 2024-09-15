@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react'
 
+//解决下面的类型错误
+// interface Iitem{
+
+// }
+
 export default function FetchApi() {
   //抓了数据 要存到前端模块中
   const [list, setList] = useState([])
@@ -45,11 +50,11 @@ export default function FetchApi() {
   return (
     <>
       {list &&
-        list.map((item: IItem[]) => {
+        list.map(item => {
           return (
-            <div key={item.userID}>
-              <div>Id:{item.id}</div>
-              <div>Title:{item.title}</div>
+            <div key={item.userId} className="flex flex-start space-x-2 border-2">
+              <div className="p-4 border-r-2">Id:{item.id}</div>
+              <div className="flex justify-center items-center">Title:{item.title}</div>
             </div>
           )
         })}
