@@ -1,8 +1,12 @@
 # .md -> markdown
 
+- 9.8
+
 .md网络博客的笔记的形式
 
-react -> webApp前端框架 -> 基本项目文件
+metaverse -> facebook -> meta
+
+react -> webApp前端框架 -> 基本项目文件 -> 什么是SPA？-> SPA的好处和坏处 -> 会给用户有什么新的体验？(html css js) -> 客户端速度快
 react-native -> 移动端前端框架
 
 尤雨溪(google -> 独立) -> javascript -> vue(国内用这个) react(facebook)
@@ -19,14 +23,13 @@ react-native -> 移动端前端框架
 
 测试自己新建项目`vite -> react -> tailwind`
 
-react -> SPA -> 前端框架 -> 组件化 -> 模块化 -> x -> instagram
+react -> SPA(single page applicantion) -> 前端框架 -> 组件化 -> 模块化 -> x -> instagram -> 单页面的应用
 
 html页面 -> script 导入js
 
 .jsx(tsx) -> .js/ts -> 可以在js中写html -> 写html的部分 `必须要return`
 
 SDN -> 远程引用 -> 比如本地的包过大 很占用服务器空间 -> 运行速度慢
-
 `盒子模型` 里到外 context(tailwind -> h- w-) -> padding内边距(p) -> border边框(border) -> margin外边距（m-）
 
 `flex` -> 每个元素的间隔是 `space-x-2`
@@ -67,3 +70,20 @@ react19 -> 进阶有难度
 `&&` -> 与 -> 都为真 才为真 -> `true && true -> true`
 `||` -> 或
 `!` -> 非
+
+- 9.15
+- 适用性设计 -> 基于目标的习惯进行设计 -> ps/ai/adobe系列 -> 基于这些东西设计快捷键 -> 用户体验很好
+- 无障碍设计(universal Design) -> 所有的用户都可以用你的东西 -> 微信(老人模式)
+- `www.npmjs.com` -> 插件的网站 -> 可以自己发布的
+- `bun i` -> 安装依赖(Dependency)
+- `bun add xxx` = `npm instal xxx` -> 添加依赖 -> 生产环境 -> `bun add -D xxx` -> 安装到开发环境
+- `bun dev`
+- `bun build`
+
+- 和数据库后端进行交互
+  - 程序中 前端 -> frontEnd -> 和用户直接进行交互
+  - 后端 -> BackEnd -> 设计师不会做这个 -> 纯正的程序员 -> 和服务器做交互 -> 从数据库中拿数据 发送给前端
+  - 如何拿数据到前端？
+    - 后端 -> 后端api -> `https://jsonplaceholder.typicode.com/albums` -> 文件格式JSON(javascript object notation) -> 可以跨语言识别(适合语言都可以识别JSON) -> 前端和后端用的编程语言是不一样的js/ts 后端java/go/python/c#/php
+    - `JSON.stringify('JSON文件')` -> JSON转换为js可以识别的部分
+    - `JSON.parse（'js的对象数组'）`
