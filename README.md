@@ -112,3 +112,5 @@ react19 -> 进阶有难度
   - 图标(svg -> 问chat) -> 搜索方式 软件名 + svg 去google -> 阿里的icon -> lucide-react
 
   - 作业 -> 1.主页快点画 2.复习今天这个todoList的布局
+
+- 下一次promise

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const promise1 = data => {
+        console.log('Fulfilling') //异步函数
+        return Promise((resolve, reject) => {
+          data ? resolve(data) : reject('不存在data')
+        })
+      }
+
+      //.then（链式调用） .finally await async
+    </script>
+  </body>
+</html>
