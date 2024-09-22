@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
+//ShadCN Table模块
+
 const invoices = [
   {
     invoice: 'INV001',

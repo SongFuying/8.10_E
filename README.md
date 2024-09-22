@@ -109,3 +109,6 @@ react19 -> 进阶有难度
   - 大型封装UI库 -> 占资源 不自由
     - Material UI -> google的UI库 google的设计标准
     - Antd UI -> 阿里的UI库 阿里的标准
+  - 图标(svg -> 问chat) -> 搜索方式 软件名 + svg 去google -> 阿里的icon -> lucide-react
+
+  - 作业 -> 1.主页快点画 2.复习今天这个todoList的布局
