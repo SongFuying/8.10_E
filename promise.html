@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //异步和同步函数
+      //执行顺序的 -> 异步
+      // async function promiseT(){
+      //     const data = await fetch
+      // }
+
+      //   while (true) {
+      //     //这里是永远循环的 不会跳出去
+      //     if (data === 2) {
+      //       //跳出 break
+      //     }
+      //   }
+      //三个状态fullfiled -> 其实是一个同步
+      //resolve和reject
+      const promiseTest = (data) => {
+        console.log("等待链接"); //等待 -> 写了一个异步函数 但是没用await -> fetch 没用await fetch
+        //fn2(fn,t) -> 回调函数
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            data ? resolve(data) : reject("后端不存在，url错误");
+          }, 3000);
+        });
+      };
+      //.then .catch .finally
+      // async fn + await
+      //.then -> 链式调用
+      // 异步 -> 就是按顺序执行 -> 执行完第一步 再执行第二步
+      // Js-> 普通是一个同步函数 -> 所有程序是一起执行的
+
+      //   promiseTest("后端存在 正确连接")
+      //     //.then 执行的是 -> resolve
+      //     .then((result) => {
+      //       console.log(result);
+      //       return result;
+      //     })
+      //     //case2
+      //     .then(() => {
+      //       const result2 = result + 1;
+      //       console.log(result2);
+      //       return result2;
+      //     })
+      //     //case3
+      //     .then((result) => {
+      //       console.log(result + 2);
+      //     })
+      //     //.catch -> 执行reject
+      //     .catch((err) => {
+      //       console.log(err);
+      //     })
+      //     .finally(() => {
+      //       console.log("连接完成 断开链接");
+      //     });
+
+      //async await函数 await+promise函数
+      async function test(fn) {
+        //抓后端数据
+        //const res = await fetch(url)
+        //const data = await res.json()
+        //return data
+        //await中的 try...catch...finally = .then .catch .finally
+        try {
+          const response = await fn("链接成功");
+          console.log(response);
+        } catch (Err) {
+          console.log(Err);
+        } finally {
+          setTimeout(() => {
+            console.log("断开链接");
+          }, 3000);
+        }
+      }
+      test(promiseTest);
+
+      //同步函数可以先执行 后定义
+      //   fn1();
+      //   const fn1 = () => {
+      //     console.log("fn1");
+      //   };
+    </script>
+  </body>
+</html>
