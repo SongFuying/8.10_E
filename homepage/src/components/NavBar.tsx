@@ -14,6 +14,7 @@ export default function NavBar() {
     <>
       <nav className="w-full flex justify-between items-center py-4 px-6 ">
         <div className={navigationMenuTriggerStyle()}>Name</div>
+        {/* <input placeholder="123" /> */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem className="flex items-center">
