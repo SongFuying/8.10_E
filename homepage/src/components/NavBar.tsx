@@ -8,6 +8,8 @@ import {
 import { ModeToggle } from "./ModeToggle";
 import Link from "next/link";
 
+//type结合interface
+
 const nameArr = [
   { name: "AboutMe", link: "/about" },
   { name: "proto", link: "/proto" },
